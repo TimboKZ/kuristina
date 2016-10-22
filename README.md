@@ -82,7 +82,7 @@ Anime list in XML:
 
 Anime list in JSON:
 
-```
+```json
 {  
    "myanimelist":{  
       "myinfo":{  
@@ -124,7 +124,7 @@ Anime list in JSON:
 
 Manga list in XML:
 
-```
+```xml
 <myanimelist>
     <myinfo>
         <user_id>4718042</user_id>
@@ -168,7 +168,7 @@ Manga list in XML:
 
 Manga list in JSON:
 
-```
+```json
 {  
    "myanimelist":{  
       "myinfo":{  
