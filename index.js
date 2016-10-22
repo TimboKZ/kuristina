@@ -3,7 +3,7 @@
  * @author Timur Kuzhagaliyev <tim.kuzh@gmail.com>
  * @copyright 2016
  * @license MIT
- * @version 0.0.2
+ * @version 0.0.3
  */
 
 const express = require('express');
@@ -29,7 +29,17 @@ const LIST_TYPES = ['anime', 'manga'];
  */
 const RESPONSE_FORMATS = ['xml', 'json'];
 
+/**
+ * Create an instance of Express and enable CORS
+ * @since 0.0.3 Enabled CORS
+ * @since 0.0.1
+ */
 let app = express();
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+});
 
 /**
  * Show a nice welcome message to all request without the username specified, and point them at the GitHub page.
