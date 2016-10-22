@@ -21,8 +21,6 @@ https://kuristina.herokuapp.com/<LIST-TYPE>/<USERNAME>.<FORMAT>
 
 Where `<LIST-TYPE>` is either `anime` or `manga` to fetch anime or manga list respectively, `<USERNAME>` is the name of the user whose list you want to fetch and finally `<FORMAT>` is the format in which the list will be returned, either `xml` or `json`. All of the 3 parameters are case-insensitive. Consider the examples below
 
-> Note: At the moment JSON and XML results do not provide identical information. Consult the Example Responses section below.
-
 ```
 # Fetch Timbo_KZ's manga list in XML
 GET https://kuristina.herokuapp.com/manga/Timbo_KZ.xml
@@ -91,46 +89,129 @@ Anime list in XML:
 Anime list in JSON:
 
 ```
-[  
-   {  
-      "status":1,
-      "score":0,
-      "tags":"",
-      "is_rewatching":0,
-      "num_watched_episodes":0,
-      "anime_title":"Angel Beats!",
-      "anime_num_episodes":13,
-      "anime_airing_status":2,
-      "anime_id":6547,
-      "anime_studios":null,
-      "anime_licensors":null,
-      "anime_season":null,
-      "has_episode_video":true,
-      "has_promotion_video":true,
-      "has_video":true,
-      "video_url":"\/anime\/6547\/Angel_Beats\/video",
-      "anime_url":"\/anime\/6547\/Angel_Beats",
-      "anime_image_path":"https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/10\/22061.jpg?s=fc02fa92ed45c521101c25e2de51fdac",
-      "is_added_to_list":false,
-      "anime_media_type_string":"TV",
-      "anime_mpaa_rating_string":"PG-13",
-      "start_date_string":null,
-      "finish_date_string":null,
-      "anime_start_date_string":"03-04-10",
-      "anime_end_date_string":"26-06-10",
-      "days_string":null,
-      "storage_string":"",
-      "priority_string":"Low"
+{  
+   "myanimelist":{  
+      "myinfo":{  
+         "user_id":"4718042",
+         "user_name":"Timbo_KZ",
+         "user_watching":"57",
+         "user_completed":"125",
+         "user_onhold":"1",
+         "user_dropped":"1",
+         "user_plantowatch":"31",
+         "user_days_spent_watching":"43.86"
+      },
+      "anime":[  
+         {  
+            "series_animedb_id":"1",
+            "series_title":"Cowboy Bebop",
+            "series_synonyms":"COWBOY BEBOP; Cowboy Bebop",
+            "series_type":"1",
+            "series_episodes":"26",
+            "series_status":"2",
+            "series_start":"1998-04-03",
+            "series_end":"1999-04-24",
+            "series_image":"https://myanimelist.cdn-dena.com/images/anime/4/19644.jpg",
+            "my_id":"0",
+            "my_watched_episodes":"26",
+            "my_start_date":"2016-02-15",
+            "my_finish_date":"2016-04-02",
+            "my_score":"8",
+            "my_status":"2",
+            "my_rewatching":"0",
+            "my_rewatching_ep":"0",
+            "my_last_updated":"1459548352",
+            "my_tags":""
+         }
+      ]
    }
-]
+}
 ```
 
 Manga list in XML:
 
 ```
+<myanimelist>
+    <myinfo>
+        <user_id>4718042</user_id>
+        <user_name>Timbo_KZ</user_name>
+        <user_reading>6</user_reading>
+        <user_completed>0</user_completed>
+        <user_onhold>0</user_onhold>
+        <user_dropped>0</user_dropped>
+        <user_plantoread>0</user_plantoread>
+        <user_days_spent_watching>0.99</user_days_spent_watching>
+    </myinfo>
+    <manga>
+        <series_mangadb_id>7776</series_mangadb_id>
+        <series_title>Toaru Kagaku no Railgun</series_title>
+        <series_synonyms>
+        To Aru Kagaku no Choudenjihou; A Certain Scientific Railgun
+        </series_synonyms>
+        <series_type>1</series_type>
+        <series_chapters>0</series_chapters>
+        <series_volumes>0</series_volumes>
+        <series_status>1</series_status>
+        <series_start>2007-05-27</series_start>
+        <series_end>0000-00-00</series_end>
+        <series_image>
+        https://myanimelist.cdn-dena.com/images/manga/1/149212.jpg
+        </series_image>
+        <my_id>45546470</my_id>
+        <my_read_chapters>79</my_read_chapters>
+        <my_read_volumes>0</my_read_volumes>
+        <my_start_date>2015-09-14</my_start_date>
+        <my_finish_date>0000-00-00</my_finish_date>
+        <my_score>10</my_score>
+        <my_status>1</my_status>
+        <my_rereadingg/>
+        <my_rereading_chap>0</my_rereading_chap>
+        <my_last_updated>1444721961</my_last_updated>
+        <my_tags/>
+    </manga>
+</myanimelist>
 ```
 
 Manga list in JSON:
 
 ```
+{  
+   "myanimelist":{  
+      "myinfo":{  
+         "user_id":"4718042",
+         "user_name":"Timbo_KZ",
+         "user_reading":"6",
+         "user_completed":"0",
+         "user_onhold":"0",
+         "user_dropped":"0",
+         "user_plantoread":"0",
+         "user_days_spent_watching":"0.99"
+      },
+      "manga":[  
+         {  
+            "series_mangadb_id":"7776",
+            "series_title":"Toaru Kagaku no Railgun",
+            "series_synonyms":"To Aru Kagaku no Choudenjihou; A Certain Scientific Railgun",
+            "series_type":"1",
+            "series_chapters":"0",
+            "series_volumes":"0",
+            "series_status":"1",
+            "series_start":"2007-05-27",
+            "series_end":"0000-00-00",
+            "series_image":"https://myanimelist.cdn-dena.com/images/manga/1/149212.jpg",
+            "my_id":"45546470",
+            "my_read_chapters":"79",
+            "my_read_volumes":"0",
+            "my_start_date":"2015-09-14",
+            "my_finish_date":"0000-00-00",
+            "my_score":"10",
+            "my_status":"1",
+            "my_rereadingg":"",
+            "my_rereading_chap":"0",
+            "my_last_updated":"1444721961",
+            "my_tags":""
+         }
+      ]
+   }
+}
 ```

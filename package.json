@@ -25,9 +25,10 @@
   },
   "homepage": "https://github.com/TimboKZ/kuristina#readme",
   "dependencies": {
+    "cheerio": "^0.22.0",
     "express": "^4.14.0",
     "path": "^0.12.7",
     "request": "^2.75.0",
-    "cheerio": "latest"
+    "xml2js": "^0.4.17"
   }
 }
