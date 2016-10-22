@@ -6,10 +6,15 @@
  * @version 0.0.1
  */
 
+const PORT = process.env.PORT || 3000;
+
 var express = require('express');
 var app = express();
 
-// respond with "hello world" when a GET request is made to the homepage
-app.get('/', function(req, res) {
-    res.send('hello world');
+app.get('/', function (req, res) {
+    res.send('Hello World!');
+});
+
+app.listen(PORT, function () {
+    console.log('Example app listening on port 3000!');
 });
