@@ -4,6 +4,7 @@
   "description": "An API to fetch anime lists using MyAnimeList account names.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/TimboKZ/kuristina/issues"
   },
-  "homepage": "https://github.com/TimboKZ/kuristina#readme"
+  "homepage": "https://github.com/TimboKZ/kuristina#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
