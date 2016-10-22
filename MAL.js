@@ -3,7 +3,7 @@
  * @author Timur Kuzhagaliyev <tim.kuzh@gmail.com>
  * @copyright 2016
  * @license MIT
- * @version 0.0.2
+ * @version 0.0.3
  */
 
 const request = require('request');
@@ -18,12 +18,16 @@ class MAL {
      * @param {string} list
      * @param {string} username
      * @param callback
+     * @since 0.0.3 Now returns a specific error if user was not found
      * @since 0.0.1
      */
     static getListXml(list, username, callback) {
         let url = 'http://myanimelist.net/malappinfo.php?u=' + username + '&status=all&type=' + list;
         console.log('Fetching ' + url);
         request(url, function(error, response, content) {
+            if(content.indexOf('<error>Invalid username</error>') !== -1) {
+                return callback('User not found');
+            }
             callback(error, content);
         });
     }
@@ -69,7 +73,7 @@ class MAL {
             let $ = cheerio.load(html);
             let content = $('table.list-table').first().attr('data-items');
             if(!content || content.length < 1) {
-                return callback('Could not fetch data from the page. Most likely username is invalid.');
+                return callback('User not found');
             }
             callback(error, content);
         });

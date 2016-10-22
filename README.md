@@ -35,13 +35,7 @@ Here are several possible cases which might have to handle in your applcaition:
 
 * If you access any other URL but the index or the URLs of format specified above, Kuristina will return `404 Not Found` status code.
 * If the list type is not supported, username does not appear to be valid (i.e. MAL user names can only contain letters, numbers, dashes and underscores) or format specified is not supported Kuristina will return `400 Bad Request` status code.
-* If you request the list in JSON format and the username you specified does not exist, server will return a `500 Internal Server Error` status code.
-* If you request the list in XML format and the username you specified does not exist, server will return a the list as usual with the following contents:
-```xml
-<myanimelist>
-    <error>Invalid username</error>
-</myanimelist>
-```
+* If you request a list and the username does not exist (i.e. MAL cannot find it), `404 Not Found` status code will be returned.
 * If any other error occurs during fetching, server will return `500 Internal Server Error` status code.
 
 # Example responses
