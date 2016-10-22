@@ -29,6 +29,9 @@ class MAL {
             }
             let $ = cheerio.load(html);
             let content = $('table.list-table').first().attr('data-items');
+            if(!content || content.length < 1) {
+                return callback('Could not fetch data from the page. Most likely username is invalid.');
+            }
             callback(error, content);
         });
     }

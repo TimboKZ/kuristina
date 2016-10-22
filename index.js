@@ -62,8 +62,11 @@ app.get('/:list/:username.:format', function (req, res) {
     }
 
     let generateResponse = function generateResponse(error, content) {
+        if(error) {
+            return res.send(500, 'An error occurred while accessing MAL: ' + error);
+        }
         res.header('Content-Type', 'application/' + format);
-        res.send(content);
+        return res.send(content);
     };
 
     if(format === 'xml') {
