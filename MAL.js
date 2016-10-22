@@ -3,7 +3,7 @@
  * @author Timur Kuzhagaliyev <tim.kuzh@gmail.com>
  * @copyright 2016
  * @license MIT
- * @version 0.0.3
+ * @version 0.0.4
  */
 
 const request = require('request');
@@ -36,6 +36,8 @@ class MAL {
      * @param {string} list
      * @param {string} username
      * @param callback
+     * @since 0.0.4 Now displays empty string as null
+     * @since 0.0.2
      */
     static getListJson(list, username, callback) {
         this.getListXml(list, username, function(error, content) {
@@ -43,7 +45,7 @@ class MAL {
                 return callback(error);
             }
             const parseString = require('xml2js').parseString;
-            parseString(content, { explicitArray: false }, function(error, json) {
+            parseString(content, { explicitArray: false, emptyTag: null }, function(error, json) {
                 if(error) {
                     return callback(error);
                 }

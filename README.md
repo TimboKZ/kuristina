@@ -115,7 +115,7 @@ Anime list in JSON:
             "my_rewatching":"0",
             "my_rewatching_ep":"0",
             "my_last_updated":"1459548352",
-            "my_tags":""
+            "my_tags":null
          }
       ]
    }
@@ -200,10 +200,10 @@ Manga list in JSON:
             "my_finish_date":"0000-00-00",
             "my_score":"10",
             "my_status":"1",
-            "my_rereadingg":"",
+            "my_rereadingg":null,
             "my_rereading_chap":"0",
             "my_last_updated":"1444721961",
-            "my_tags":""
+            "my_tags":null
          }
       ]
    }
