@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/TimboKZ/kuristina.git"
   },
+  "engines": {
+    "node": "4.6.1"
+  },
   "author": {
     "name": "Timur Kuzhagaliyev",
     "email": "tim.kuzh@gmail.com",
