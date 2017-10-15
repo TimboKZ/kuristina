@@ -11,6 +11,8 @@ At the moment, Kuristina only has 2 features:
 
 This list is most likely to expand over time, so you might wanna check this page once in a while if you're interested.
 
+> **Note:** Kuristina now has a [Node.js wrapper](https://www.npmjs.com/package/kuristina).
+
 # Usage
 
 At the moment Kuristina only accepts GET request of the following format:
