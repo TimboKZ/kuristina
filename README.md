@@ -1,5 +1,7 @@
 # Kuristina
 
+> **IMPORTANT:** Kuristina has been **deprecated** since the MAL API blackout in May 2018 took down one of the critical MAL endpoints. Please use [Jikan](https://jikan.docs.apiary.io/#reference/0/user) or a similar project.
+
 Kuristina is here to assist you in fetching list contents for both manga and anime lists from MyAnimeList. This page contains all of the documentation you need to use it, but if you want to find out more about how it was developed refer to [this article](https://foxypanda.me/my-anime-timeline-and-kuristina/).
 
 # Features
